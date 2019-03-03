@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZzV-BQ-juG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random Photo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CatsViewController" customModule="CatsImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgR-Kn-IRV">
+                                <rect key="frame" x="16" y="20" width="343" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwN-Bu-giy">
+                                <rect key="frame" x="117" y="531" width="141" height="30"/>
+                                <state key="normal" title="Random Cat"/>
+                                <connections>
+                                    <action selector="randomCatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2Q-kr-7uu"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O2I-J5-mQm">
+                                <rect key="frame" x="16" y="100" width="343" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="382" id="ZZE-Pe-Y8h"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O2I-J5-mQm" firstAttribute="top" secondItem="zgR-Kn-IRV" secondAttribute="bottom" constant="8" id="1Z4-cm-KPf"/>
+                            <constraint firstItem="DwN-Bu-giy" firstAttribute="top" secondItem="O2I-J5-mQm" secondAttribute="bottom" constant="49" id="Aja-dV-8yV"/>
+                            <constraint firstItem="DwN-Bu-giy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="BgF-le-Hao"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O2I-J5-mQm" secondAttribute="trailing" constant="16" id="PQI-u5-ePQ"/>
+                            <constraint firstItem="zgR-Kn-IRV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sew-Uu-cgt"/>
+                            <constraint firstItem="O2I-J5-mQm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YTC-ZT-PyC"/>
+                            <constraint firstItem="zgR-Kn-IRV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="iUt-Z8-BKz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DwN-Bu-giy" secondAttribute="bottom" constant="57" id="kR9-BV-rho"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zgR-Kn-IRV" secondAttribute="trailing" constant="16" id="opL-l8-aEH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DwN-Bu-giy" secondAttribute="trailing" constant="117" id="u8f-oO-cHS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Random Photo" id="lY2-Sc-h4o"/>
+                    <connections>
+                        <outlet property="randomCatsImageView" destination="O2I-J5-mQm" id="Ohu-Q6-r2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Upload Photo-->
+        <scene sceneID="IOX-L1-fUR">
+            <objects>
+                <viewController id="tV9-QO-UOh" customClass="NewCatsViewController" customModule="CatsImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E9v-e6-rTq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-wA-ers">
+                                <rect key="frame" x="16" y="20" width="343" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="CeX-hG-cVF">
+                                <rect key="frame" x="156" y="490" width="63" height="94"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eu-Lt-SBP">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Library"/>
+                                        <connections>
+                                            <action selector="libraryButtonTapped:" destination="tV9-QO-UOh" eventType="touchUpInside" id="o57-e9-y5V"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJX-SM-JKy">
+                                        <rect key="frame" x="0.0" y="58" width="63" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Upload"/>
+                                        <connections>
+                                            <action selector="uploadButtonTapped:" destination="tV9-QO-UOh" eventType="touchUpInside" id="1YU-56-GQQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Solid_gray" translatesAutoresizingMaskIntoConstraints="NO" id="qji-Vv-mlk">
+                                <rect key="frame" x="16" y="100" width="343" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="382" id="tpO-iz-MhZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qji-Vv-mlk" firstAttribute="leading" secondItem="Nk2-8j-jss" secondAttribute="leading" constant="16" id="3jq-yC-UaS"/>
+                            <constraint firstItem="Nk2-8j-jss" firstAttribute="trailing" secondItem="qji-Vv-mlk" secondAttribute="trailing" constant="16" id="EGt-mu-hlV"/>
+                            <constraint firstItem="Nk2-8j-jss" firstAttribute="trailing" secondItem="zOc-wA-ers" secondAttribute="trailing" constant="16" id="OwF-ac-ejt"/>
+                            <constraint firstItem="zOc-wA-ers" firstAttribute="top" secondItem="Nk2-8j-jss" secondAttribute="top" id="TM4-mD-kh3"/>
+                            <constraint firstItem="qji-Vv-mlk" firstAttribute="top" secondItem="zOc-wA-ers" secondAttribute="bottom" constant="8" id="egH-1O-Af1"/>
+                            <constraint firstItem="Nk2-8j-jss" firstAttribute="trailing" secondItem="CeX-hG-cVF" secondAttribute="trailing" constant="156" id="fxe-rY-cZG"/>
+                            <constraint firstItem="zOc-wA-ers" firstAttribute="leading" secondItem="Nk2-8j-jss" secondAttribute="leading" constant="16" id="g4d-LE-tzc"/>
+                            <constraint firstItem="Nk2-8j-jss" firstAttribute="bottom" secondItem="CeX-hG-cVF" secondAttribute="bottom" constant="34" id="lU5-EZ-nxY"/>
+                            <constraint firstItem="CeX-hG-cVF" firstAttribute="top" secondItem="qji-Vv-mlk" secondAttribute="bottom" constant="8" id="tKd-ZE-fgO"/>
+                            <constraint firstItem="CeX-hG-cVF" firstAttribute="leading" secondItem="Nk2-8j-jss" secondAttribute="leading" constant="156" id="teG-JQ-2Ah"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nk2-8j-jss"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload Photo" id="HIg-ph-IH6"/>
+                    <connections>
+                        <outlet property="imageToUploadImageView" destination="qji-Vv-mlk" id="S33-MH-q4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEe-he-gz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993" y="134"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7yM-Zi-rot">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZzV-BQ-juG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ugF-o2-B8i">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="rdF-eY-Ltz"/>
+                        <segue destination="tV9-QO-UOh" kind="relationship" relationship="viewControllers" id="eD8-jh-OTz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYD-mY-bLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Solid_gray" width="200" height="200"/>
+    </resources>
+</document>
